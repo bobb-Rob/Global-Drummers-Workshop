@@ -4,4 +4,31 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+/* fonts */
+.cocogoose-font {
+  font-family: 'COCOGOOSE', sans-serif;
+}
+
+.lato-font {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Colors */
+.orange-red {
+  color: #ec5242;
+}
+
+.black-like {
+  color: #272a31;
+}
+
+.graylight {
+  color: #d3d3d3;
+}
+
+#nav-container {
+  height: 4.5rem;
+  padding: 1.5rem;
+}
 /*# sourceMappingURL=main.css.map */
