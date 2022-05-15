@@ -1,0 +1,37 @@
+{
+  "name": "global-drummers-workshop",
+  "version": "1.0.0",
+  "description": "Drum Festival is a global coalition of star drummers and musicicans alike to showcase their skills and toolset",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobb-Rob/Global-Drummers-Workshop.git"
+  },
+  "keywords": [
+    "Drumset",
+    "Drum",
+    "Drum",
+    "Festival",
+    "DopeStick"
+  ],
+  "author": "Robertson Akpan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobb-Rob/Global-Drummers-Workshop/issues"
+  },
+  "homepage": "https://github.com/bobb-Rob/Global-Drummers-Workshop#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "hint": "^6.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
