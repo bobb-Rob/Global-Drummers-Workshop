@@ -31,4 +31,212 @@
   height: 4.5rem;
   padding: 1.5rem;
 }
+
+#nav-container .fa-bars {
+  color: #272a31;
+}
+
+#headline {
+  padding: 1rem 0 3.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.back-drop {
+  overflow-x: clip;
+  width: 100%;
+}
+
+.back-drop .headline-bg-image {
+  z-index: -3;
+  width: 100%;
+  position: absolute;
+  max-height: 100px;
+  top: 0;
+  left: 0;
+  padding: 10em;
+  background-image: url(../../assets/images/DSC_1494-edited-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow-x: clip;
+}
+
+.faded-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), to(rgba(255, 255, 255, 0.9)));
+  background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0.9));
+  z-index: -2;
+}
+
+#headline * {
+  padding: 0 0.9rem;
+}
+
+#headline > div {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#headline .headline-main-text {
+  padding: 0 0.9rem;
+  padding-top: 0.3rem;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+  background-image: url(https://images.pexels.com/photos/1458377/pexels-photo-1458377.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-size: cover;
+  background-position: 0% 55%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#headline h1 + p {
+  margin: 1.2rem 0;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 24px;
+  border: 2px solid #fff;
+}
+
+#headline .venue {
+  font-size: 14px;
+}
+
+.programs {
+  padding: 1.6rem 1.5rem;
+  background-color: #272a31;
+  color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.programs .program-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://cdn.wallpapersafari.com/28/62/WhLiyU.png);
+  background-size: cover;
+  opacity: 0.052;
+}
+
+.thin-line {
+  width: 2rem;
+  border-bottom: 1px solid #ec5242;
+  margin: 1rem auto;
+}
+
+.program-list {
+  list-style: none;
+}
+
+.program-list li {
+  background: rgba(78, 81, 91, 0.5);
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.programs .join-btn {
+  padding: 20px;
+  background-color: #ec5242;
+  color: #fff;
+  margin: 2rem 0.9rem auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: none;
+  border-radius: 1px;
+}
+
+.performing-artists-section {
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.6rem 1.5rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  color: #272a31;
+}
+
+.performing-artists {
+  list-style: none;
+}
+
+.performing-artists li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.performing-artists .artist-image {
+  min-width: 100px;
+  height: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 35%;
+          flex: 1 1 35%;
+}
+
+.performing-artists .artist-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
+}
+
+.performing-artists .artist-bio {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 65%;
+          flex: 1 0 65%;
+  height: 100px;
+  overflow: auto;
+  margin: 0 0 1rem 1rem;
+}
+
+.performing-artists-section .more-btn {
+  margin: 12px;
+  padding: 12px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(78, 81, 91, 0.5);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(78, 81, 91, 0.8);
+}
+
+.performing-artists-section .more-btn i {
+  color: #ec5242;
+}
 /*# sourceMappingURL=main.css.map */
