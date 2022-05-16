@@ -51,8 +51,7 @@ $fonts-weight: (
   background-color:rgba(255, 255, 255, 0.3);
   position: relative;
 
-  @at-root .back-drop {
-    overflow-x: clip;
+  @at-root .back-drop {   
     width: 100%;
 
     .headline-bg-image {
@@ -62,11 +61,10 @@ $fonts-weight: (
       max-height: 100px;
       top: 0;
       left: 0;
-      padding: 10em;
+      padding: 10em;     
       background-image: url(../../assets/images/DSC_1494-edited-1.jpg);
       background-repeat: no-repeat;
       background-size: 100%;
-      overflow-x: clip;
     }
   }
 
@@ -103,7 +101,7 @@ $fonts-weight: (
     color: transparent;
   }
 
-  h1 + p {
+ .home-headline-body {
     margin: 1.2rem 0;
     font-size: 14px;
     line-height: 22px;

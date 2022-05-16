@@ -1,0 +1,47 @@
+@import './variables';
+@import './mixins';
+
+#about-headline-container {
+    padding: 0 1rem;
+    @include flex-align-center;
+    flex-direction: column;
+    background-color: rgb(246, 245, 245);
+    background-image: url(../../assets/icons/illustrationOne.png),
+        url(../../assets/icons/illustration7.png),
+        url(../../assets/icons/illustration6.png),
+        url(../../assets/icons/icons.png);
+    background-size: 20%, 6%, 5%, 10%;
+    background-repeat: no-repeat;
+    background-position: 10% 35%, 15% -10px, 75% 2%, 95% 32%;
+
+    div {
+        padding: 1rem;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .about-headline-body {
+        text-align: center;
+        padding: 1rem 0.5rem;
+        background-color: $white;
+        border: 1px solid rgba(78, 81, 91, 0.2);
+        box-shadow: 0px 2px 7px 0px #DEE1E2;
+    }
+
+    .about-headline-body+p {
+        text-align: center;
+        margin: 0 2rem;
+        padding: 2rem 1rem;
+
+        @at-root .about-headline-body + p a {           
+            color: $secondary;
+            font-weight: 800;
+        }
+       
+    }
+}

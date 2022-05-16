@@ -43,7 +43,6 @@
 }
 
 .back-drop {
-  overflow-x: clip;
   width: 100%;
 }
 
@@ -58,7 +57,6 @@
   background-image: url(../../assets/images/DSC_1494-edited-1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  overflow-x: clip;
 }
 
 .faded-backdrop {
@@ -95,7 +93,7 @@
   color: transparent;
 }
 
-#headline h1 + p {
+#headline .home-headline-body {
   margin: 1.2rem 0;
   font-size: 14px;
   line-height: 22px;
