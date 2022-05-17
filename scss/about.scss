@@ -1,6 +1,10 @@
 @import './variables';
 @import './mixins';
 
+.about-nav-background {
+    background-color: rgb(246, 245, 245) !important;
+}
+
 #about-headline-container {
     padding: 0 1rem;
     @include flex-align-center;
@@ -14,6 +18,7 @@
     background-repeat: no-repeat;
     background-position: 10% 35%, 15% -10px, 75% 2%, 95% 32%;
 
+
     div {
         padding: 1rem;
         font-size: 18px;
@@ -23,25 +28,106 @@
     h1 {
         text-align: center;
         margin-bottom: 2rem;
+        font-weight: bold;
     }
 
     .about-headline-body {
         text-align: center;
         padding: 1rem 0.5rem;
         background-color: $white;
-        border: 1px solid rgba(78, 81, 91, 0.2);
+        border: 1px solid rgba(121, 125, 136, 0.2);
         box-shadow: 0px 2px 7px 0px #DEE1E2;
+        @include paragraph-font-style;
+        color: rgb(74, 74, 74);
     }
 
     .about-headline-body+p {
         text-align: center;
         margin: 0 2rem;
         padding: 2rem 1rem;
+        @include paragraph-font-style;
 
-        @at-root .about-headline-body + p a {           
+        @at-root .about-headline-body+p a {
             color: $secondary;
             font-weight: 800;
         }
-       
+    }
+}
+
+#about-global-DF {
+    min-height: 400px;
+    padding: 0 1rem;
+}
+
+#past-global-drum-fest {
+    @include flex-align-center;
+    flex-direction: column;
+    padding: 1.5rem 0 1rem;
+    border-top: 1px solid rgba(121, 125, 136, 0.2);
+
+    p {
+        text-align: center;
+        @include paragraph-font-style;
+    }
+
+    @at-root .past-image-courosal {
+        width: 100%;
+        border: 1px solid rgba(121, 125, 136, 0.2);
+        padding: 1rem;
+        margin: 1rem;
+
+        .courosal-image-card {
+            height: 200px;
+            width: 100%;
+            background-color: gray;
+            position: relative;
+            margin-bottom: 1rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                // object-position: 10% 10%;                
+            }
+        }
+
+        @at-root .courosal-image-fade {
+            position: absolute;
+            background-color: rgba(218, 52, 52, 0.561);
+            color: $white;
+            width: 100%;
+            height: 100%;
+            @include flex-center;
+            flex-direction: column;
+        }
+    }
+}
+
+.footer {
+    @include flex-align-center;
+    flex-direction: column;
+    background-color: $secondary;
+    padding: 1rem;
+
+    h3 {
+        color: $light;
+    }
+}
+
+.about-footer {
+
+    @at-root .brand-support {
+        @include flex-align-center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+            min-height: 46px;
+            flex-grow: 1 0 auto;
+            padding: .5rem .5rem;
+        }
+
+
     }
 }
