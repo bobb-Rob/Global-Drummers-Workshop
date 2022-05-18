@@ -43,6 +43,10 @@ $fonts-weight: (
     @include flex-center;
     justify-content: space-between;
 
+    .logo {
+        width: 45%;
+    }
+
     .fa-bars {
         color: $secondary;
     }
@@ -50,7 +54,7 @@ $fonts-weight: (
 
 #headline {
     padding: 2rem 1rem 3.5rem;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
 
 
@@ -72,12 +76,13 @@ $fonts-weight: (
     }
 
     @at-root .faded-backdrop {
+        // display: none;
         position: absolute;
         top: 0;
         left: 0;
         height: 100vh;
         width: 100%;
-        background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.9));
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5));
         z-index: -2;
     }
 
@@ -281,8 +286,34 @@ $fonts-weight: (
     }
 }
 
+.copyright {
+    @include flex-center;
+    background-color: $secondary;
+    padding: 1rem 0;
+    width: 100%;
+    // height: 160px;
+
+    img {
+        width: 80px;
+    }
+
+    h6 {
+        padding: 1rem;
+        font-size: .6rem;
+        color: $white;
+        max-width: 160px;
+        line-height: 15px;
+    }
+
+
+}
+
 .navlinks-wrapper {
     display: none;
+}
+
+.footer {
+    display: none
 }
 
 @media (min-width: $break-point-tablet) {
@@ -291,6 +322,10 @@ $fonts-weight: (
         padding: $section-left-padding;
         background-color: $white;
         box-shadow: 0 5px 5px -4px #AAAAAA;
+
+        .logo {
+            width: 120px;
+        }
 
         .hamburger {
             display: none;
@@ -365,7 +400,8 @@ $fonts-weight: (
         padding: 2rem 10%;
 
         @at-root .program-header h4,
-        .perform-header h4 {
+        .perform-header h4,
+        .footer h3 {
             font-size: 1.5rem;
         }
 
@@ -398,6 +434,99 @@ $fonts-weight: (
             margin-bottom: 2rem;
             font-size: 1rem;
         }
+    }
+
+    .performing-artists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.8rem 10%;
+
+        li {
+            flex-direction: column;
+            min-width: 200px;
+            max-width: 210px;
+            height: 230px;
+            overflow: hidden;
+            margin: 0.2rem .3rem;
+
+
+            .artist-image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 0% 0%;
+                }
+            }
+
+            .artist-bio {
+                flex: 1 0 65%;
+                height: 100px;
+                overflow: auto;
+                margin: 0 0 1rem 1rem;
+            }
+
+            p {
+                margin-top: .5rem;
+                @include paragraph-font-style;
+                line-height: 16px;
+            }
+        }
+
+
+    }
+
+    .performing-artists-section .more-btn {
+        display: none;
+    }
+
+    .footer {
+        @include flex-align-center;
+        flex-direction: column;
+        background-color: $secondary;
+        padding: 1rem;
+        height: 250px;
+
+        h3 {
+            color: $light;
+        }
+    }
+
+    .home-footer {
+
+        .brand-support {
+            @include flex-align-center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1.5rem 0 2rem;
+
+            img {
+                min-height: 46px;
+                flex-grow: 1 0 auto;
+                padding: .5rem 2rem;
+            }
+        }
+    }
+
+    .copyright {
+        padding: 2rem 10%;
+        width: 100%;
+        background-color: $light;
+        height: 160px;
+
+        h6 {
+            padding: 1rem;
+            font-size: 1.2rem;
+            color: $secondary;
+            max-width: 100%;
+        }
+
+        img {
+            width: 120px;
+        }
+
     }
 
 

@@ -1,3 +1,7 @@
+.logo {
+  width: 45%;
+}
+
 .about-nav-background {
   background-color: #f6f5f5 !important;
 }
@@ -31,6 +35,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-weight: bold;
+  max-width: 30rem;
 }
 
 #about-headline-container .about-headline-body {
@@ -173,5 +178,61 @@
       -ms-flex-positive: 1 0 auto;
           flex-grow: 1 0 auto;
   padding: .5rem .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  #about-headline-container {
+    padding: 5rem 10%;
+    background-color: #f6f5f5;
+    background-image: url(../../assets/icons/illustrationOne.png), url(../../assets/icons/illustration7.png), url(../../assets/icons/illustration6.png), url(../../assets/icons/icons.png);
+    background-size: 6rem, 3%, 2rem, 2.5rem;
+    background-repeat: no-repeat;
+    background-position: 23% 55%, 15% 25%, 75% 28%, 79% 42%;
+  }
+  #about-headline-container div {
+    display: none;
+  }
+  #about-headline-container h1 {
+    font-size: 3rem;
+    line-height: 4.3rem;
+    max-width: 40rem;
+  }
+  #about-headline-container .about-headline-body {
+    width: 60%;
+    padding: 1.6rem 2.5rem;
+  }
+  #past-global-drum-fest {
+    padding: 2rem 10%;
+  }
+  #past-global-drum-fest h3 {
+    font-size: 1.5rem;
+    color: #272a31;
+  }
+  #past-global-drum-fest > p {
+    font-size: 1.2rem;
+    color: #272a31;
+  }
+  .past-image-courosal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .past-image-courosal .courosal-image-card {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .about-footer .footer {
+    display: none;
+  }
+  .about-footer .copyright {
+    background-color: #272a31;
+  }
+  .about-footer .copyright h6 {
+    color: #d3d3d3;
+  }
 }
 /*# sourceMappingURL=about.css.map */

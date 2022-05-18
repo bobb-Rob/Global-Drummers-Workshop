@@ -1,6 +1,10 @@
 @import './variables';
 @import './mixins';
 
+.logo {
+    width: 45%;
+}
+
 .about-nav-background {
     background-color: rgb(246, 245, 245) !important;
 }
@@ -29,6 +33,7 @@
         text-align: center;
         margin-bottom: 2rem;
         font-weight: bold;
+        max-width: 30rem;
     }
 
     .about-headline-body {
@@ -129,5 +134,76 @@
         }
 
 
+    }
+}
+
+
+@media screen and (min-width: $break-point-tablet) {
+
+    #about-headline-container {
+        padding: 5rem 10%;
+        background-color: rgb(246, 245, 245);
+        background-image: url(../../assets/icons/illustrationOne.png),
+            url(../../assets/icons/illustration7.png),
+            url(../../assets/icons/illustration6.png),
+            url(../../assets/icons/icons.png);
+        background-size: 6rem, 3%, 2rem, 2.5rem;
+        background-repeat: no-repeat;
+        background-position: 23% 55%, 15% 25%, 75% 28%, 79% 42%;
+
+        div {
+            display: none;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 4.3rem;
+            max-width: 40rem;
+        }
+
+        .about-headline-body {
+            width: 60%;
+            padding: 1.6rem 2.5rem;
+        }
+    }
+
+    #past-global-drum-fest {
+        padding: 2rem 10%;
+
+        h3 {
+            font-size: 1.5rem;
+            color: $secondary;
+        }
+
+        >p {
+            font-size: 1.2rem;
+            color: $secondary;
+        }
+
+        @at-root .past-image-courosal {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .courosal-image-card {
+                flex-basis: 47%;
+            }
+        }
+
+    }
+
+    .about-footer {
+        .footer {
+            display: none;
+        }
+
+        .copyright {
+            background-color: $secondary;
+
+
+            h6 {
+                color: $light;
+            }
+        }
     }
 }

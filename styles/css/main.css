@@ -44,13 +44,17 @@
           justify-content: space-between;
 }
 
+#nav-container .logo {
+  width: 45%;
+}
+
 #nav-container .fa-bars {
   color: #272a31;
 }
 
 #headline {
   padding: 2rem 1rem 3.5rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0);
   position: relative;
 }
 
@@ -77,8 +81,8 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), to(rgba(255, 255, 255, 0.9)));
-  background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0.9));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), to(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0.5));
   z-index: -2;
 }
 
@@ -316,7 +320,38 @@
   color: #ec5242;
 }
 
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #272a31;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.copyright img {
+  width: 80px;
+}
+
+.copyright h6 {
+  padding: 1rem;
+  font-size: .6rem;
+  color: #fff;
+  max-width: 160px;
+  line-height: 15px;
+}
+
 .navlinks-wrapper {
+  display: none;
+}
+
+.footer {
   display: none;
 }
 
@@ -326,6 +361,9 @@
     background-color: #fff;
     -webkit-box-shadow: 0 5px 5px -4px #AAAAAA;
             box-shadow: 0 5px 5px -4px #AAAAAA;
+  }
+  #nav-container .logo {
+    width: 120px;
   }
   #nav-container .hamburger {
     display: none;
@@ -388,7 +426,8 @@
     padding: 2rem 10%;
   }
   .program-header h4,
-  .perform-header h4 {
+  .perform-header h4,
+  .footer h3 {
     font-size: 1.5rem;
   }
   .programs .program-list {
@@ -427,6 +466,112 @@
   .programs .join-btn {
     margin-bottom: 2rem;
     font-size: 1rem;
+  }
+  .performing-artists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1.8rem 10%;
+  }
+  .performing-artists li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 200px;
+    max-width: 210px;
+    height: 230px;
+    overflow: hidden;
+    margin: 0.2rem .3rem;
+  }
+  .performing-artists li .artist-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0% 0%;
+       object-position: 0% 0%;
+  }
+  .performing-artists li .artist-bio {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 65%;
+            flex: 1 0 65%;
+    height: 100px;
+    overflow: auto;
+    margin: 0 0 1rem 1rem;
+  }
+  .performing-artists li p {
+    margin-top: .5rem;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    line-height: 16px;
+  }
+  .performing-artists-section .more-btn {
+    display: none;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #272a31;
+    padding: 1rem;
+    height: 250px;
+  }
+  .footer h3 {
+    color: #d3d3d3;
+  }
+  .home-footer .brand-support {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1.5rem 0 2rem;
+  }
+  .home-footer .brand-support img {
+    min-height: 46px;
+    -webkit-box-flex: 1 0 auto;
+        -ms-flex-positive: 1 0 auto;
+            flex-grow: 1 0 auto;
+    padding: .5rem 2rem;
+  }
+  .copyright {
+    padding: 2rem 10%;
+    width: 100%;
+    background-color: #d3d3d3;
+    height: 160px;
+  }
+  .copyright h6 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #272a31;
+    max-width: 100%;
+  }
+  .copyright img {
+    width: 120px;
   }
 }
 /*# sourceMappingURL=main.css.map */
