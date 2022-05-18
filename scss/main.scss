@@ -36,21 +36,66 @@ $fonts-weight: (
     color: $light;
 }
 
+.close-icon-wrapper {
+    position: absolute;
+    top: 35px;
+    left: 86%;
+    list-style: none;
+    cursor: pointer;
+    filter:
+        invert(37%) sepia(77%) saturate(2442%) hue-rotate(340deg) brightness(101%) contrast(85%);
+    transition: 0.5s;
+}
+
+.display-b {
+    display: block !important;
+}
+
 // Navbar section
 #nav-container {
     height: 4.5rem;
     padding: 1.5rem;
     @include flex-center;
     justify-content: space-between;
+    position: relative;
 
     .logo {
         width: 45%;
     }
 
-    .fa-bars {
-        color: $secondary;
+    .hamburger {
+        width: 32px;
+    }
+
+    @at-root .navlinks-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: $secondary;
+        height: 100%;
+        overflow-x: hidden;
+        width: 0;
+        transition: 0.5s;
+        @include flex-align-center;
+        flex-direction: column;
+        list-style: none;
+        padding-top: 2rem;
+
+        button {
+            display: none;
+        }
+
+        li {
+            font-size: 1.2rem;
+            color: $primary;
+            padding: 0.7rem;
+        }
+
+
     }
 }
+
 
 #headline {
     padding: 2rem 1rem 3.5rem;
@@ -82,7 +127,7 @@ $fonts-weight: (
         left: 0;
         height: 100vh;
         width: 100%;
-        background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5));
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0.7));
         z-index: -2;
     }
 
@@ -305,12 +350,9 @@ $fonts-weight: (
         line-height: 15px;
     }
 
-
 }
 
-.navlinks-wrapper {
-    display: none;
-}
+
 
 .footer {
     display: none
@@ -528,7 +570,4 @@ $fonts-weight: (
         }
 
     }
-
-
-
 }

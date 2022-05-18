@@ -27,6 +27,22 @@
   color: #d3d3d3;
 }
 
+.close-icon-wrapper {
+  position: absolute;
+  top: 35px;
+  left: 86%;
+  list-style: none;
+  cursor: pointer;
+  -webkit-filter: invert(37%) sepia(77%) saturate(2442%) hue-rotate(340deg) brightness(101%) contrast(85%);
+          filter: invert(37%) sepia(77%) saturate(2442%) hue-rotate(340deg) brightness(101%) contrast(85%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.display-b {
+  display: block !important;
+}
+
 #nav-container {
   height: 4.5rem;
   padding: 1.5rem;
@@ -42,14 +58,50 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 #nav-container .logo {
   width: 45%;
 }
 
-#nav-container .fa-bars {
-  color: #272a31;
+#nav-container .hamburger {
+  width: 32px;
+}
+
+.navlinks-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #272a31;
+  height: 100%;
+  overflow-x: hidden;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  padding-top: 2rem;
+}
+
+.navlinks-wrapper button {
+  display: none;
+}
+
+.navlinks-wrapper li {
+  font-size: 1.2rem;
+  color: #ec5242;
+  padding: 0.7rem;
 }
 
 #headline {
@@ -81,8 +133,8 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), to(rgba(255, 255, 255, 0.5)));
-  background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0.5));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, white), to(rgba(255, 255, 255, 0.7)));
+  background: linear-gradient(to top, white 60%, rgba(255, 255, 255, 0.7));
   z-index: -2;
 }
 
@@ -345,10 +397,6 @@
   color: #fff;
   max-width: 160px;
   line-height: 15px;
-}
-
-.navlinks-wrapper {
-  display: none;
 }
 
 .footer {
