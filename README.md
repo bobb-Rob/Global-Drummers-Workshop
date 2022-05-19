@@ -1,7 +1,10 @@
 # Global-Drummers-Workshop
 
-> This project is for Global Drummers Festival event coming up sometime in September this year. It features over 50 top drum artist from all over the world. 
+> This project is the Final capstone project of the first module at microverse. It is aimed at building a responsive UI of a website for an event themed "_**Global Drummers Festival 2022**_". 
 
+In this project, I built the home and the about page of the website and it is adaptable to all screen sizes. The template I used as a guide was originally designed by [Cindy Shin in Behance](https://www.behance.net/adagio07).
+
+## Live Demo
 Below is the link to the demo of this porject.
 
 > [DEMO](https://bobb-rob.github.io/Global-Drummers-Workshop/)
