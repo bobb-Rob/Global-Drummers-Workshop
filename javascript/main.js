@@ -20,33 +20,43 @@ const drummers = [
   },
   {
     name: 'Will Calhoun',
-    bio: 'Will Calhoun is an accomplished drummer from New York known for being a'
+    bio: 'Will Calhoun is a drummer from New York known for being a '
        + 'member of the band Living Colour.',
     image: ['../assets/images/Calhoun_Will-.jpg'],
   },
   {
     name: 'John Blackwell Jr.',
     bio: 'Blackwell began learning the drums when he was three years old from his'
-     + 'father. By the time he was 17, he was performing professionally.',
+     + ' father.',
     image: ['../assets/images/john-blackell.jpg'],
   },
   {
     name: 'Larnell Lewis',
-    bio: 'Having played the drums since he was two years old, Larnell Lewis has risen'
-     + 'to become one of the most notable names in modern drumming.',
+    bio: 'Started playing drums since he was two years old, and he has risen'
+     + ' to become a notable names in modern drumming.',
     image: ['../assets/images/Larnell Lewis-jp.jpg'],
   },
   {
     name: 'Brian Blade',
     bio: 'Brian Blade is one of the most accomplished contemporary jazz drummers of'
-     + 'the past 20 years.',
+     + ' the past 20 years.',
     image: ['../assets/images/Brian Blade.jpg'],
   },
   {
-    name: 'Brian Blade',
-    bio: 'Brian Blade is one of the most accomplished contemporary jazz drummers of'
-     + 'the past 20 years.',
-    image: ['../assets/images/Brian Blade.jpg'],
+    name: 'Matt Garstka',
+    bio: `Matt Garstka became the drummer for the progressive metal band Animals as Leaders
+     in 2012.`,
+    image: ['../assets/images/Matt-Garstka-.jpg'],
+  },
+  {
+    name: 'Matt Cameron',
+    bio: 'Cameron began performing professionally in San Diego when he was 14 years old',
+    image: ['../assets/images/Matt-Cameron.jpg'],
+  },
+  {
+    name: 'Billy Cobham',
+    bio: 'Billy Cobham is an important figure in the development of the modern drum set.',
+    image: ['../assets/images/Billy-Cobham.jpg'],
   },
 ];
 
@@ -57,17 +67,17 @@ const pastEventImages = [
     year: '2020',
   },
   {
-    image: '../assets/images/Chris “Daddy” Dave.jpg',
+    image: '../assets/images/David-Garibaldi.jpg',
     location: 'Global drum festival in Amsterdam',
-    year: '2020',
+    year: '2021',
   },
   {
-    image: '../assets/images/Chris “Daddy” Dave.jpg',
+    image: '../assets/images/Billy-Cobham.jpg',
     location: 'Global drum festival in Amsterdam',
-    year: '2020',
+    year: '2021',
   },
   {
-    image: '../assets/images/Chris “Daddy” Dave.jpg',
+    image: '../assets/images/Dennis-Chambers.jpg',
     location: 'Global drum festival in Amsterdam',
     year: '2020',
   },

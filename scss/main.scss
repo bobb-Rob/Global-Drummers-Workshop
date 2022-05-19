@@ -221,7 +221,7 @@ $fonts-weight: (
 .performing-artists {
   list-style: none;
 
-  li {
+  .artist-card {
     display: flex;
     position: relative;
     overflow: visible !important;
@@ -381,8 +381,12 @@ $fonts-weight: (
 
 .artist-bio {
   flex: 1 0 65%;
-  height: 100px;
-  overflow: auto;
+  min-height: 100px;
+
+  @media screen and (max-width: 768px) {
+    overflow: auto;
+  }
+
   margin: 0 0 1rem 1rem;
 }
 
@@ -569,41 +573,44 @@ $fonts-weight: (
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1.8rem 10%;
+    padding: 1.8rem 5%;
+  }
 
-    li {
-      flex-direction: column;
-      min-width: 200px;
-      max-width: 210px;
-      height: 230px;
-      overflow: hidden;
-      margin: 0.2rem 0.3rem;
-      border: 1px solid rgba(78, 81, 91, 0.5);
-      box-shadow: 0 5px 5px -1px #aaa;
+  .artist-card {
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 210px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0.2rem 0.3rem;
+    border: 1px solid rgba(78, 81, 91, 0.5);
+    box-shadow: 0 5px 5px -1px #aaa;
 
-      .artist-bio {
-        flex: 1 0 65%;
-        height: 100px;
-        overflow: auto;
-        margin: 0.2rem 0 1rem 1rem;
-      }
+    p {
+      height: max-content;
+      margin-top: 0;
+      font-size: 14px;
+      font-style: normal;
+      line-height: 16px;
+      padding: 0.4rem;
+    }
+  }
 
-      p {
-        margin-top: 0.5rem;
-        font-size: 14px;
-        font-style: normal;
-        line-height: 16px;
-        padding-right: 0.4rem;
-      }
+  .artist-bio {
+    max-height: 100px;
+    margin: 0;
+
+    h4 {
+      padding-left: 0.4rem;
     }
   }
 
   .artist-image {
+    height: 60%;
+
     img {
       width: 100%;
-      height: 100%;
       object-fit: cover;
-      object-position: 0% 0%;
     }
   }
 
