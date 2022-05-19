@@ -48,12 +48,15 @@
   justify-content: space-between;
   position: relative;
 }
+
 #nav-container .navbar {
   display: flex;
 }
+
 #nav-container .logo {
   width: 45%;
 }
+
 #nav-container .hamburger {
   width: 32px;
 }
@@ -80,12 +83,15 @@
     padding-top: 2rem;
   }
 }
+
 .navlinks-wrapper li {
   padding: 0.7rem;
 }
+
 .navlinks-wrapper li a {
   text-decoration: none;
 }
+
 @media screen and (max-width: 768px) {
   .navlinks-wrapper li a {
     font-size: 1.2rem;
@@ -98,9 +104,11 @@
   background-color: rgba(255, 255, 255, 0);
   position: relative;
 }
+
 #headline .back-drop {
   width: 100%;
 }
+
 #headline .back-drop .headline-bg-image {
   z-index: -3;
   width: 100%;
@@ -113,6 +121,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #headline .faded-backdrop {
   position: absolute;
   top: 0;
@@ -122,10 +131,12 @@
   background: linear-gradient(to top, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0.7));
   z-index: -2;
 }
+
 #headline > div {
   font-weight: 700;
   font-size: 18px;
 }
+
 #headline .headline-main-text {
   padding-top: 1rem;
   font-size: 28px;
@@ -137,6 +148,7 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
 #headline .home-headline-body {
   margin: 1.2rem 0;
   font-size: 14px;
@@ -145,6 +157,7 @@
   padding: 0 24px;
   border: 2px solid #fff;
 }
+
 #headline .venue {
   font-size: 14px;
 }
@@ -158,6 +171,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .programs .program-bg {
   position: absolute;
   top: 0;
@@ -169,6 +183,7 @@
   opacity: 0.052;
   z-index: 1;
 }
+
 .programs .join-btn {
   padding: 20px;
   background-color: #ec5242;
@@ -181,6 +196,7 @@
   transition: 0.3s;
   z-index: 2;
 }
+
 .programs .join-btn:hover {
   opacity: 0.6;
   cursor: pointer;
@@ -189,11 +205,13 @@
 .performing-artists {
   list-style: none;
 }
+
 .performing-artists .artist-card {
   display: flex;
   position: relative;
   overflow: visible !important;
 }
+
 .performing-artists p {
   margin-top: 0.5rem;
   font-size: 14px;
@@ -229,6 +247,7 @@
   border: 1px solid red;
   overflow: hidden;
 }
+
 .artist-content-image img {
   width: 100%;
 }
@@ -241,6 +260,7 @@
   list-style: none;
   z-index: 2;
 }
+
 .program-list li {
   background: rgba(78, 81, 91, 0.5);
   border-radius: 3px;
@@ -250,15 +270,18 @@
   align-items: center;
   transition: 0.8s ease-in-out;
 }
+
 .program-list li:hover {
   border: 1px solid #fff;
 }
+
 .program-list li i {
   min-width: 45px;
   height: 45px;
   background-size: 95%;
   background-repeat: no-repeat;
 }
+
 .program-list li h5 {
   font-family: "cocogoose", sans-serif;
   font-weight: 200;
@@ -266,24 +289,30 @@
   padding: 0 0.75rem;
   min-width: 100px;
 }
+
 .program-list li p {
   font-size: 14px;
   font-style: normal;
   line-height: 16px;
 }
+
 .program-list .solo-icon {
   background-image: url(../../assets/icons/drum-solo.svg);
 }
+
 .program-list .shed-icon {
   background-image: url(../../assets/icons/drum-shed.svg);
 }
+
 .program-list .exhibition-icon {
   background-image: url(../../assets/icons/Drum-exhibition.svg);
   background-size: 105%;
 }
+
 .program-list .master-class {
   background-image: url(../../assets/icons/drum-master-class.svg);
 }
+
 .program-list .Meet-up-icon {
   background-image: url(../../assets/icons/meet-up-icon.svg);
 }
@@ -304,6 +333,7 @@
   height: min-content;
   color: rgb(39, 42, 49);
 }
+
 .performing-artists-section .more-btn {
   margin: 12px;
   padding: 12px;
@@ -314,6 +344,7 @@
   font-weight: 600;
   color: rgba(78, 81, 91, 0.8);
 }
+
 .performing-artists-section .more-btn i {
   color: #ec5242;
 }
@@ -323,6 +354,7 @@
   height: 100px;
   flex: 1 1 35%;
 }
+
 .artist-image img {
   width: 100%;
   height: 100%;
@@ -335,6 +367,7 @@
   min-height: 100px;
   margin: 0 0 1rem 1rem;
 }
+
 @media screen and (max-width: 768px) {
   .artist-bio {
     overflow: auto;
@@ -349,9 +382,11 @@
   padding: 1rem 0;
   width: 100%;
 }
+
 .copyright img {
   width: 80px;
 }
+
 .copyright h6 {
   padding: 1rem;
   font-size: 1rem;
@@ -367,6 +402,7 @@
   background-color: rgb(39, 42, 49);
   padding: 1rem;
 }
+
 .footer h4 {
   color: #d3d3d3;
 }
@@ -378,6 +414,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .home-footer .brand-support img {
   min-height: 46px;
   flex: 1 0 auto;
@@ -390,9 +427,11 @@
     background-color: #fff;
     box-shadow: 0 5px 5px -4px #aaa;
   }
+
   #nav-container .logo {
     width: 120px;
   }
+
   #nav-container .hamburger {
     display: none;
   }
@@ -401,9 +440,11 @@
     display: flex;
     list-style: none;
   }
+
   .navlinks-wrapper li {
     padding: 1rem 1.5rem;
   }
+
   .navlinks-wrapper li a {
     font-weight: bold;
     color: rgb(39, 42, 49);
@@ -417,6 +458,7 @@
     min-width: max-content;
     transition: 0.6s ease;
   }
+
   .nav-join-btn:hover {
     background-color: rgba(236, 82, 66, 0.8);
     color: #fff;
@@ -431,21 +473,26 @@
     background-size: 50px;
     background-position: 90vw;
   }
+
   #headline div {
     font-size: 2rem;
   }
+
   #headline .headline-main-text {
     font-size: 4rem;
     line-height: 4.3rem;
   }
+
   #headline .home-headline-body {
     max-width: 38rem;
     border: 3px solid #fff;
     margin: 2rem 0 3rem 0;
   }
+
   #headline .event-date {
     font-size: 2rem;
   }
+
   #headline .venue {
     font-size: 1.5rem;
   }
@@ -453,6 +500,7 @@
   .back-drop {
     width: 100%;
   }
+
   .back-drop .headline-bg-image {
     background-position: 0% -10%;
     background-repeat: no-repeat;
@@ -472,6 +520,7 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .program-list li {
     flex-direction: column;
     justify-content: flex-start;
@@ -480,11 +529,13 @@
     padding: 2rem;
     max-width: 200px;
   }
+
   .program-list h5 {
     font-size: 1rem;
     text-align: center;
     margin: 0.5rem;
   }
+
   .program-list p {
     text-align: center;
   }
@@ -495,8 +546,8 @@
   }
 
   .program-header h4,
-.perform-header h4,
-.footer h4 {
+  .perform-header h4,
+  .footer h4 {
     font-size: 1.5rem;
   }
 
@@ -517,6 +568,7 @@
     border: 1px solid rgba(78, 81, 91, 0.5);
     box-shadow: 0 5px 5px -1px #aaa;
   }
+
   .artist-card p {
     height: max-content;
     margin-top: 0;
@@ -530,6 +582,7 @@
     max-height: 100px;
     margin: 0;
   }
+
   .artist-bio h4 {
     padding-left: 0.4rem;
   }
@@ -537,6 +590,7 @@
   .artist-image {
     height: 60%;
   }
+
   .artist-image img {
     width: 100%;
     object-fit: cover;
@@ -554,6 +608,7 @@
     padding: 1rem;
     height: 250px;
   }
+
   .footer h4 {
     color: #d3d3d3;
   }
@@ -579,15 +634,15 @@
     background-color: #d3d3d3;
     height: 160px;
   }
+
   .copyright h6 {
     padding: 1rem;
     font-size: 1.2rem;
     color: rgb(39, 42, 49);
     max-width: 100%;
   }
+
   .copyright img {
     width: 120px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
