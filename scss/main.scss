@@ -1,642 +1,639 @@
-@import "./variables";
-@import "./function";
-@import "./mixins";
+$padding-lr: 0 0.9rem;
+
+$primary: #ec5242;
+$secondary: rgb(39, 42, 49);
+$light: #d3d3d3;
+$bg-white: #f7f7f7;
+$white: #fff;
+
+$break-point-tablet: 768px;
+$section-left-padding: 0 10%;
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* fonts */
 .cocogoose-font {
-    font-family: 'cocogoose', sans-serif;
+  font-family: 'cocogoose', sans-serif;
 }
 
 .lato-font {
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 $fonts-weight: (
-    "regular": 400,
-    "meduim": 500,
-    "bold": 700,
+  "regular": 400,
+  "meduim": 500,
+  "bold": 700,
 );
 
 /* Colors */
 .orange-red {
-    color: $primary;
+  color: $primary;
 }
 
 .black-like {
-    color: $secondary;
+  color: $secondary;
 }
 
 .graylight {
-    color: $light;
+  color: $light;
 }
 
 .close-icon-wrapper {
-    position: absolute;
-    top: 35px;
-    left: 86%;
-    list-style: none;
-    cursor: pointer;
-    filter:
-        invert(37%) sepia(77%) saturate(2442%) hue-rotate(340deg) brightness(101%) contrast(85%);
-    transition: 0.5s;
+  position: absolute;
+  top: 35px;
+  left: 86%;
+  list-style: none;
+  cursor: pointer;
+  filter: invert(37%) sepia(77%) saturate(2442%) hue-rotate(340deg) brightness(101%) contrast(85%);
+  transition: 0.5s;
 }
 
 .display-b {
-    display: block !important;
+  display: block !important;
 }
 
 // Navbar section
 #nav-container {
-    height: 4.5rem;
-    padding: 1.5rem;
-    @include flex-center;
-    justify-content: space-between;
-    position: relative;
+  height: 4.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 
-    .navbar {
-        display: flex;
-    }
+  .navbar {
+    display: flex;
+  }
 
-    .logo {
-        width: 45%;
-    }
+  .logo {
+    width: 45%;
+  }
 
-    .hamburger {
-        width: 32px;
-    }
-
-    @at-root .navlinks-wrapper {
-        @media screen and (max-width: 768px) {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 5;
-            background-color: $secondary;
-            height: 100%;
-            overflow-x: hidden;
-            width: 0;
-            transition: 0.5s;
-            @include flex-align-center;
-            flex-direction: column;
-            list-style: none;
-            padding-top: 2rem;
-
-            button {
-                display: none;
-            }
-        }
-
-        li {
-            padding: 0.7rem;
-        }
-
-        li a {
-            @media screen and (max-width: 768px) {
-                font-size: 1.2rem;
-                color: $primary;
-            }
-
-            text-decoration: none;
-        }
-    }
+  .hamburger {
+    width: 32px;
+  }
 }
 
+.navlinks-wrapper {
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: $secondary;
+    height: 100%;
+    overflow-x: hidden;
+    width: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 2rem;
 
+    button {
+      display: none;
+    }
+  }
 
+  li {
+    padding: 0.7rem;
+  }
+
+  li a {
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+      color: $primary;
+    }
+
+    text-decoration: none;
+  }
+}
 
 #headline {
-    padding: 2rem 1rem 3.5rem;
-    background-color: rgba(255, 255, 255, 0);
-    position: relative;
+  padding: 2rem 1rem 3.5rem;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
 
+  .back-drop {
+    width: 100%;
 
-    @at-root .back-drop {
-        width: 100%;
-
-        .headline-bg-image {
-            z-index: -3;
-            width: 100%;
-            position: absolute;
-            max-height: 100px;
-            top: 0;
-            left: 0;
-            padding: 10em;
-            background-image: url(../../assets/images/DSC_1494-edited-1.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    .headline-bg-image {
+      z-index: -3;
+      width: 100%;
+      position: absolute;
+      max-height: 100px;
+      top: 0;
+      left: 0;
+      padding: 10em;
+      background-image: url(../../assets/images/DSC_1494-edited-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
     }
+  }
 
-    @at-root .faded-backdrop {
-        // display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        background: linear-gradient(to top, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0.7));
-        z-index: -2;
-    }
+  .faded-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0.7));
+    z-index: -2;
+  }
 
-    >div {
-        font-weight: map-get($fonts-weight, bold);
-        font-size: 18px;
-    }
+  >div {
+    font-weight: map-get($fonts-weight, bold);
+    font-size: 18px;
+  }
 
-    .headline-main-text {
-        padding-top: 1rem;
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 34px;
-        background-image: url(https://images.pexels.com/photos/1458377/pexels-photo-1458377.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-        background-size: cover;
-        background-position: 0% 55%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
+  .headline-main-text {
+    padding-top: 1rem;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 34px;
+    background-image: url(https://images.pexels.com/photos/1458377/pexels-photo-1458377.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size: cover;
+    background-position: 0% 55%;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
-    .home-headline-body {
-        margin: 1.2rem 0;
-        @include paragraph-font-style;
-        padding: 0 24px;
-        border: 2px solid $white;
-    }
+  .home-headline-body {
+    margin: 1.2rem 0;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    padding: 0 24px;
+    border: 2px solid $white;
+  }
 
-    .venue {
-        font-size: 14px;
-    }
+  .venue {
+    font-size: 14px;
+  }
 }
 
 .programs {
-    padding: 1.6rem 1.5rem;
-    background-color: $secondary;
-    color: $white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 1.6rem 1.5rem;
+  background-color: $secondary;
+  color: $white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    .program-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-image: url(https://cdn.wallpapersafari.com/28/62/WhLiyU.png);
-        background-size: cover;
-        opacity: 0.052;
-        z-index: 1;
-    }
-
-    @at-root .thin-line {
-        width: 2rem;
-        border-bottom: 2px solid $primary;
-        margin: 1rem auto;
-    }
-
-
-    @at-root .program-list {
-        list-style: none;
-        z-index: 2;
-
-        li {
-            background: rgba(78, 81, 91, 0.5);
-            border-radius: 3px;
-            margin-top: 0.5rem;
-            padding: 0.75rem;
-            @include flex-align-center;
-            transition: .8s ease-in-out;
-
-            &:hover {
-                border: 1px solid $white;
-            }
-
-            i {
-                min-width: 45px;
-                height: 45px;
-                background-size: 95%;
-                background-repeat: no-repeat;
-            }
-
-            h5 {
-                font-family: 'cocogoose', sans-serif;
-                font-weight: 200;
-                color: $primary;
-                padding: 0 .75rem;
-                min-width: 100px;
-            }
-
-            p {
-                @include paragraph-font-style;
-                line-height: 16px;
-            }
-
-        }
-
-        .solo-icon {
-            background-image: url(../../assets/icons/drum-solo.svg);
-        }
-
-        .shed-icon {
-            background-image: url(../../assets/icons/drum-shed.svg);
-        }
-
-        .exhibition-icon {
-            background-image: url(../../assets/icons/Drum-exhibition.svg);
-            background-size: 105%;
-        }
-
-        .master-class {
-            background-image: url(../../assets/icons/drum-master-class.svg);
-
-        }
-
-        .Meet-up-icon {
-            background-image: url(../../assets/icons/meet-up-icon.svg);
-        }
-
-
-    }
-
-    .join-btn {
-        padding: 20px;
-        background-color: $primary;
-        color: $white;
-        margin: 2rem 0.9rem auto;
-        width: max-content;
-        border: none;
-        border-radius: 1px;
-        opacity: 1;
-        transition: 0.3s;
-        z-index: 2;
-    }
-
-    .join-btn:hover {
-        opacity: 0.6;
-        cursor: pointer;
-    }
-}
-
-.performing-artists-section {
-    min-height: max-content;
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.6rem 1.5rem;
-    height: min-content;
-    color: $secondary;
-
-    @at-root .performing-artists {
-        list-style: none;
-
-        li {
-            display: flex;
-        }
-
-        .artist-image {
-            min-width: 100px;
-            height: 100px;
-            flex: 1 1 35%;
-
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: 0% 0%;
-            }
-        }
-
-        .artist-bio {
-            flex: 1 0 65%;
-            height: 100px;
-            overflow: auto;
-            margin: 0 0 1rem 1rem;
-        }
-
-        p {
-            margin-top: .5rem;
-            @include paragraph-font-style;
-            line-height: 16px;
-        }
-    }
-
-    .more-btn {
-        margin: 12px;
-        padding: 12px;
-        width: 100%;
-        background-color: $white;
-        border: 1px solid rgba(78, 81, 91, 0.5);
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: rgba(78, 81, 91, 0.8);
-
-        i {
-            color: $primary;
-        }
-    }
-}
-
-.copyright {
-    @include flex-center;
-    background-color: $light;
-    padding: 1rem 0;
+  .program-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
+    background-image: url(https://cdn.wallpapersafari.com/28/62/WhLiyU.png);
+    background-size: cover;
+    opacity: 0.052;
+    z-index: 1;
+  }
 
+  .join-btn {
+    padding: 20px;
+    background-color: $primary;
+    color: $white;
+    margin: 2rem 0.9rem auto;
+    width: max-content;
+    border: none;
+    border-radius: 1px;
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 2;
+  }
 
-    img {
-        width: 80px;
-    }
-
-    h6 {
-        padding: 1rem;
-        font-size: 1rem;
-        color: $secondary;
-        max-width: 230px;
-        line-height: 15px;
-    }
+  .join-btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 }
 
-.footer {
-    @include flex-align-center;
-    flex-direction: column;
-    background-color: $secondary;
-    padding: 1rem;
+.performing-artists {
+  list-style: none;
 
-    h4 {
-        color: $light;
-    }
-}
+  li {
+    display: flex;
+    position: relative;
+    overflow: visible;
+  }
 
-.home-footer {
-    @at-root .brand-support {
-        @include flex-align-center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        img {
-            min-height: 46px;
-            flex-grow: 1 0 auto;
-            padding: .5rem .5rem;
-        }
-    }
-}
-
-@media (min-width: $break-point-tablet) {
-
-    #nav-container {
-        padding: $section-left-padding;
-        background-color: $white;
-        box-shadow: 0 5px 5px -4px #AAAAAA;
-
-        .logo {
-            width: 120px;
-        }
-
-        .hamburger {
-            display: none;
-        }
-
-        .navlinks-wrapper {
-            display: flex;
-            list-style: none;
-
-            li {
-                padding: 1rem 1.5rem;
-            }
-
-            li a {
-                font-weight: bold;
-                color: $secondary;
-            }
-        }
-
-        .nav-join-btn {
-            padding: 0 .5rem;
-            border: 4px solid $primary;
-            color: $primary;
-            background-color: $white;
-            min-width: max-content;
-            transition: 0.6s ease;
-
-            &:hover {
-                background-color: rgba(236, 82, 66, 0.8);
-                color: $white;
-                cursor: pointer;
-                border: none;
-            }
-        }
-    }
-
-    #headline {
-        padding: 5.5rem 10% 6rem 10%;
-        background-image: url(../../assets/icons/illustration2.png);
-        background-repeat: no-repeat;
-        background-size: 50px;
-        background-position: 90vw;
-
-        @at-root .back-drop {
-            width: 100%;
-
-            .headline-bg-image {
-                background-position: 0% -10%;
-                background-repeat: no-repeat;
-                background-size: 100%;
-            }
-        }
-
-        @at-root .faded-backdrop {
-            background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.6));
-
-        }
-
-        div {
-            font-size: 2rem;
-        }
-
-        .headline-main-text {
-            font-size: 4rem;
-            line-height: 4.3rem;
-        }
-
-        .home-headline-body {
-            max-width: 38rem;
-            border: 3px solid $white;
-            margin: 2rem 0 3rem 0;
-        }
-
-        .event-date {
-            font-size: 2rem;
-        }
-
-        .venue {
-            font-size: 1.5rem;
-        }
-    }
-
-    .programs {
-        padding: 2rem 10%;
-
-        @at-root .program-header h4,
-        .perform-header h4,
-        .footer h4 {
-            font-size: 1.5rem;
-        }
-
-        .program-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-            li {
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                margin: 0.2rem 0.2rem;
-                padding: 2rem;
-                max-width: 200px;
-            }
-
-            h5 {
-                font-size: 1rem;
-                text-align: center;
-                margin: .5rem;
-            }
-
-            p {
-                text-align: center;
-            }
-        }
-
-        .join-btn {
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-    }
-
-    .performing-artists {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 1.8rem 10%;
-
-        li {
-            flex-direction: column;
-            min-width: 200px;
-            max-width: 210px;
-            height: 230px;
-            overflow: hidden;
-            margin: 0.2rem .3rem;
-
-
-            .artist-image {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: 0% 0%;
-                }
-            }
-
-            .artist-bio {
-                flex: 1 0 65%;
-                height: 100px;
-                overflow: auto;
-                margin: 0 0 1rem 1rem;
-            }
-
-            p {
-                margin-top: .5rem;
-                @include paragraph-font-style;
-                line-height: 16px;
-            }
-        }
-
-
-    }
-
-    .performing-artists-section .more-btn {
-        display: none;
-    }
-
-    .footer {
-        @include flex-align-center;
-        flex-direction: column;
-        background-color: $secondary;
-        padding: 1rem;
-        height: 250px;
-
-        h4 {
-            color: $light;
-        }
-    }
-
-    .home-footer {
-
-        .brand-support {
-            @include flex-align-center;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 1.5rem 0 2rem;
-
-            img {
-                min-height: 46px;
-                flex-grow: 1 0 auto;
-                padding: .5rem 2rem;
-            }
-        }
-    }
-
-    .copyright {
-        padding: 2rem 10%;
-        width: 100%;
-        background-color: $light;
-        height: 160px;
-
-        h6 {
-            padding: 1rem;
-            font-size: 1.2rem;
-            color: $secondary;
-            max-width: 100%;
-        }
-
-        img {
-            width: 120px;
-        }
-
-    }
+  p {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 16px;
+  }
 }
 
 // Artist Image Overlay
-.performing-artists li {
-    position: relative;
-    overflow: visible;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $secondary;
+  overflow: hidden;
+  width: 120%;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.3s ease;
+  z-index: 2;
 }
 
 .performing-artists li:hover .overlay {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: $secondary;
-    overflow: hidden;
-    width: 120%;
+.program-list {
+  list-style: none;
+  z-index: 2;
+
+  li {
+    background: rgba(78, 81, 91, 0.5);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    transition: 0.8s ease-in-out;
+
+    &:hover {
+      border: 1px solid $white;
+    }
+
+    i {
+      min-width: 45px;
+      height: 45px;
+      background-size: 95%;
+      background-repeat: no-repeat;
+    }
+
+    h5 {
+      font-family: 'cocogoose', sans-serif;
+      font-weight: 200;
+      color: $primary;
+      padding: 0 0.75rem;
+      min-width: 100px;
+    }
+
+    p {
+      font-size: 14px;
+      font-style: normal;
+      line-height: 16px;
+    }
+  }
+
+  .solo-icon {
+    background-image: url(../../assets/icons/drum-solo.svg);
+  }
+
+  .shed-icon {
+    background-image: url(../../assets/icons/drum-shed.svg);
+  }
+
+  .exhibition-icon {
+    background-image: url(../../assets/icons/Drum-exhibition.svg);
+    background-size: 105%;
+  }
+
+  .master-class {
+    background-image: url(../../assets/icons/drum-master-class.svg);
+  }
+
+  .Meet-up-icon {
+    background-image: url(../../assets/icons/meet-up-icon.svg);
+  }
+}
+
+.thin-line {
+  width: 2rem;
+  border-bottom: 2px solid $primary;
+  margin: 1rem auto;
+}
+
+.performing-artists-section {
+  min-height: max-content;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 1.5rem;
+  height: min-content;
+  color: $secondary;
+
+  .more-btn {
+    margin: 12px;
+    padding: 12px;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid rgba(78, 81, 91, 0.5);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(78, 81, 91, 0.8);
+
+    i {
+      color: $primary;
+    }
+  }
+}
+
+.artist-image {
+  min-width: 100px;
+  height: 100px;
+  flex: 1 1 35%;
+
+  img {
+    width: 100%;
     height: 100%;
-    transform: scale(0);
-    transition: .3s ease;
-    z-index: 2;
+    object-fit: cover;
+    object-position: 0% 0%;
+  }
+}
+
+.artist-bio {
+  flex: 1 0 65%;
+  height: 100px;
+  overflow: auto;
+  margin: 0 0 1rem 1rem;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light;
+  padding: 1rem 0;
+  width: 100%;
+
+  img {
+    width: 80px;
+  }
+
+  h6 {
+    padding: 1rem;
+    font-size: 1rem;
+    color: $secondary;
+    max-width: 230px;
+    line-height: 15px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $secondary;
+  padding: 1rem;
+
+  h4 {
+    color: $light;
+  }
+}
+
+.home-footer {
+  .brand-support {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      min-height: 46px;
+      flex: 1 0 auto;
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}
+
+@media (min-width: $break-point-tablet) {
+  #nav-container {
+    padding: $section-left-padding;
+    background-color: $white;
+    box-shadow: 0 5px 5px -4px #aaa;
+
+    .logo {
+      width: 120px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+  .navlinks-wrapper {
+    display: flex;
+    list-style: none;
+
+    li {
+      padding: 1rem 1.5rem;
+    }
+
+    li a {
+      font-weight: bold;
+      color: $secondary;
+    }
+  }
+
+  .nav-join-btn {
+    padding: 0 0.5rem;
+    border: 4px solid $primary;
+    color: $primary;
+    background-color: $white;
+    min-width: max-content;
+    transition: 0.6s ease;
+
+    &:hover {
+      background-color: rgba(236, 82, 66, 0.8);
+      color: $white;
+      cursor: pointer;
+      border: none;
+    }
+  }
+
+  #headline {
+    padding: 5.5rem 10% 6rem 10%;
+    background-image: url(../../assets/icons/illustration2.png);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: 90vw;
+
+    div {
+      font-size: 2rem;
+    }
+
+    .headline-main-text {
+      font-size: 4rem;
+      line-height: 4.3rem;
+    }
+
+    .home-headline-body {
+      max-width: 38rem;
+      border: 3px solid $white;
+      margin: 2rem 0 3rem 0;
+    }
+
+    .event-date {
+      font-size: 2rem;
+    }
+
+    .venue {
+      font-size: 1.5rem;
+    }
+  }
+
+  .back-drop {
+    width: 100%;
+
+    .headline-bg-image {
+      background-position: 0% -10%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .faded-backdrop {
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.6));
+  }
+
+  .programs {
+    padding: 2rem 10%;
+  }
+
+  .program-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0.2rem 0.2rem;
+      padding: 2rem;
+      max-width: 200px;
+    }
+
+    h5 {
+      font-size: 1rem;
+      text-align: center;
+      margin: 0.5rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .join-btn {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .program-header h4,
+  .perform-header h4,
+  .footer h4 {
+    font-size: 1.5rem;
+  }
+
+  .performing-artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.8rem 10%;
+
+    li {
+      flex-direction: column;
+      min-width: 200px;
+      max-width: 210px;
+      height: 230px;
+      overflow: hidden;
+      margin: 0.2rem 0.3rem;
+
+      .artist-bio {
+        flex: 1 0 65%;
+        height: 100px;
+        overflow: auto;
+        margin: 0 0 1rem 1rem;
+      }
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .artist-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0% 0%;
+    }
+  }
+
+  .performing-artists-section .more-btn {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $secondary;
+    padding: 1rem;
+    height: 250px;
+
+    h4 {
+      color: $light;
+    }
+  }
+
+  .home-footer {
+    .brand-support {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1.5rem 0 2rem;
+    }
+  }
+
+  .brand-support img {
+    min-height: 46px;
+    flex: 1 0 auto;
+    padding: 0.5rem 2rem;
+  }
+
+  .copyright {
+    padding: 2rem 10%;
+    width: 100%;
+    background-color: $light;
+    height: 160px;
+
+    h6 {
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: $secondary;
+      max-width: 100%;
+    }
+
+    img {
+      width: 120px;
+    }
+  }
 }

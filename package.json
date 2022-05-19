@@ -4,7 +4,7 @@
   "description": "Drum Festival is a global coalition of star drummers and musicicans alike to showcase their skills and toolset",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "sass --watch scss:style"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,14 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
     "hint": "^6.2.0",
+    "sass": "^1.51.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0"
   }
 }
