@@ -79,6 +79,10 @@ $fonts-weight: (
   }
 }
 
+.nav-join-btn {
+  display: none;
+}
+
 .navlinks-wrapper {
   @media screen and (max-width: 768px) {
     position: fixed;
@@ -95,10 +99,6 @@ $fonts-weight: (
     flex-direction: column;
     list-style: none;
     padding-top: 2rem;
-
-    button {
-      display: none;
-    }
   }
 
   li {
