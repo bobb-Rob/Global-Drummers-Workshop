@@ -224,7 +224,7 @@ $fonts-weight: (
   li {
     display: flex;
     position: relative;
-    overflow: visible;
+    overflow: visible !important;
   }
 
   p {
@@ -241,13 +241,32 @@ $fonts-weight: (
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: $secondary;
   overflow: hidden;
-  width: 120%;
+  width: 100%;
   height: 100%;
   transform: scale(0);
   transition: 0.3s ease;
   z-index: 2;
+}
+
+.artistBioContent {
+  background-color: rgba(11, 12, 15, 0.81);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+}
+
+.artist-content-image {
+  width: 60%;
+  height: 50%;
+  border: 1px solid red;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 }
 
 .performing-artists li:hover .overlay {
@@ -559,12 +578,14 @@ $fonts-weight: (
       height: 230px;
       overflow: hidden;
       margin: 0.2rem 0.3rem;
+      border: 1px solid rgba(78, 81, 91, 0.5);
+      box-shadow: 0 5px 5px -1px #aaa;
 
       .artist-bio {
         flex: 1 0 65%;
         height: 100px;
         overflow: auto;
-        margin: 0 0 1rem 1rem;
+        margin: 0.2rem 0 1rem 1rem;
       }
 
       p {
@@ -572,6 +593,7 @@ $fonts-weight: (
         font-size: 14px;
         font-style: normal;
         line-height: 16px;
+        padding-right: 0.4rem;
       }
     }
   }

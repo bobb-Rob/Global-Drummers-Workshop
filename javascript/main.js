@@ -3,7 +3,14 @@ const drummers = [
     name: 'Tony Royster Jnr',
     bio: 'Tony Royster Jr. won the 1995 Guitar Center Drum-Off Competition'
         + 'when he was just 11 years old.',
-    image: ['../assets/images/Tony Royster Jnr.jpg'],
+    contentBio: `Tony Royster Jr. won the 1995 Guitar Center Drum-Off Competition 
+    when he was just 11 years old. When he was young, his drumming heroes were two
+    of the greatest fusion drummers in history: Billy Cobham and Dennis Chambers. His
+    drumming frequently demonstrates his blazing fast hand and foot speed, as well as
+     his incorporation of “gospel chops” and linear patterns. Tony Royster Jr. has
+     performed with many of today’s greatest R&B, pop, and hip-hop artists including Katy
+    Perry, Mac Miller, Jay-Z, Joe Jonas, AWOLNATION, Residente, Big Sean, and Tori Kelly.`,
+    image: ['../assets/images/Tony Royster Jnr.jpg', '../assets/images/T.png'],
   },
   {
     name: 'Anika Niles',
@@ -92,8 +99,8 @@ const DOM = (() => {
     // Artist Image div
     const artistImageHolder = createElement('div', 'artist-image');
     const img = createElement('img');
-    const [images] = image;
-    img.src = images;
+    const [image1] = image;
+    img.src = image1;
     img.alt = name;
     artistImageHolder.appendChild(img);
 
