@@ -200,6 +200,9 @@
         .copyright {
             background-color: $secondary;
 
+            // @media (max-width: 768px) {
+            //     background-color: $light;
+            // }
 
             h6 {
                 color: $light;

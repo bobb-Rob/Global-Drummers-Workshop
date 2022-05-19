@@ -68,31 +68,39 @@ $fonts-weight: (
     }
 
     @at-root .navlinks-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        background-color: $secondary;
-        height: 100%;
-        overflow-x: hidden;
-        width: 0;
-        transition: 0.5s;
-        @include flex-align-center;
-        flex-direction: column;
-        list-style: none;
-        padding-top: 2rem;
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background-color: $secondary;
+            height: 100%;
+            overflow-x: hidden;
+            width: 0;
+            transition: 0.5s;
+            @include flex-align-center;
+            flex-direction: column;
+            list-style: none;
+            padding-top: 2rem;
 
-        button {
-            display: none;
+            button {
+                display: none;
+            }
         }
 
         li {
-            font-size: 1.2rem;
-            color: $primary;
             padding: 0.7rem;
         }
 
+        li a {
+            @media screen and (max-width: 768px) {
+                font-size: 1.2rem;
+                color: $primary;
+            }
 
+            // color: $secondary;
+            text-decoration: none;
+        }
     }
 }
 
@@ -184,7 +192,7 @@ $fonts-weight: (
 
     @at-root .thin-line {
         width: 2rem;
-        border-bottom: 1px solid $primary;
+        border-bottom: 2px solid $primary;
         margin: 1rem auto;
     }
 
@@ -333,10 +341,10 @@ $fonts-weight: (
 
 .copyright {
     @include flex-center;
-    background-color: $secondary;
+    background-color: $light;
     padding: 1rem 0;
     width: 100%;
-    // height: 160px;
+
 
     img {
         width: 80px;
@@ -344,18 +352,37 @@ $fonts-weight: (
 
     h6 {
         padding: 1rem;
-        font-size: .6rem;
-        color: $white;
-        max-width: 160px;
+        font-size: 1rem;
+        color: $secondary;
+        max-width: 230px;
         line-height: 15px;
     }
-
 }
 
-
-
 .footer {
-    display: none
+    @include flex-align-center;
+    flex-direction: column;
+    background-color: $secondary;
+    padding: 1rem;
+
+    h4 {
+        color: $light;
+    }
+}
+
+.home-footer {
+    @at-root .brand-support {
+        @include flex-align-center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img {
+            min-height: 46px;
+            flex-grow: 1 0 auto;
+            padding: .5rem .5rem;
+        }
+    }
 }
 
 @media (min-width: $break-point-tablet) {
@@ -388,6 +415,7 @@ $fonts-weight: (
                 border: 4px solid $primary;
                 color: $primary;
                 background-color: $white;
+                min-width: max-content;
             }
         }
     }
@@ -443,7 +471,7 @@ $fonts-weight: (
 
         @at-root .program-header h4,
         .perform-header h4,
-        .footer h3 {
+        .footer h4 {
             font-size: 1.5rem;
         }
 
@@ -530,7 +558,7 @@ $fonts-weight: (
         padding: 1rem;
         height: 250px;
 
-        h3 {
+        h4 {
             color: $light;
         }
     }

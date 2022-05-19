@@ -28,16 +28,6 @@ const DOM = (() => {
     return { createElement, createCloseIcon }
 })();
 
-
-
-
-
-
-
-
-
-
-
 function events(interface) {
 
     const eventsFunc = (function (){
@@ -55,14 +45,24 @@ function events(interface) {
             navlinksWrapper.style.width = "100%";
             console.log('hamburger clicked');
             _addCloseEventMenu(navlinksWrapper);
-        }
+        };        
 
         return { displayMenu }
     })()
 
-
+    // Menu button listen for click Event 
     const hamburger = document.querySelector('.hamburger-btn');
     hamburger.addEventListener('click', eventsFunc.displayMenu);
+
+    // Menu links listen for click events
+    const links =  document.querySelectorAll('.navlinks-wrapper li');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                const closeIcon = document.querySelector('.close-icon-wrapper');               
+                    link.parentElement.style.width = "0%"; //Close the menu
+                    closeIcon.remove();
+            });
+        });
 
 }
 

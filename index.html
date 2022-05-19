@@ -17,23 +17,30 @@
 
 <body class="lato-font">
     <header id="nav-container">
-        <div class="logo-container">
+        <a class="logo-container" href="/index.html">
             <img class="logo" src="./assets/icons/Drum-festival-logo.svg" alt="Drum Festival Logo">
-        </div>
+        </a>
         <nav class="navbar">
             <ul class="navlinks-wrapper">
-                <li>About</li>
-                <li>Program</li>
-                <li>Sponsor</li>
-                <li>News</li>
-                <button class="nav-join-btn">
-                    Join Drum Festival
-                </button>
+                <li>
+                    <a href="./html/about.html">About</a>
+                </li>
+                <li>
+                    <a href="#programs">Program</a>
+                </li>
+                <li>
+                    <a href="#Sponsors">Sponsor</a>
+                </li>
+                <li>
+                    <a href="#performing-artist">News</a>
+                </li>
             </ul>
+            <button class="nav-join-btn">
+                Join Drum Festival
+            </button>
             <div class="hamburger-btn">
                 <img class="hamburger" src="./assets/icons/menu-icon.png">
             </div>
-
         </nav>
     </header>
     <div class="back-drop">
@@ -53,7 +60,7 @@
         <p class="black-like lato-font venue">@ O2 Arena, London, United Kingdom</p>
     </section>
     <section id="main-content">
-        <section class="programs">
+        <section id="programs" class="programs">
             <div class="program-header">
                 <h4>Main program</h4>
                 <div class="thin-line"></div>
@@ -94,7 +101,7 @@
             <button type="button" class="join-btn">Join Global Drum Festival 2022</button>
             <div class="program-bg"></div>
         </section>
-        <section class="performing-artists-section">
+        <section id="performing-artist" class="performing-artists-section">
             <div class="perform-header">
                 <h4>Performing Drummers</h4>
                 <div class="thin-line">
@@ -173,9 +180,9 @@
                 <i class="fa-solid fa-chevron-down"></i>
             </button>
         </section>
-        <footer class="home-footer">
+        <footer id="Sponsors" class="home-footer">
             <div class="footer">
-                <h3>Our Partners</h3>
+                <h4>Our Sponsors</h4>
                 <div class="thin-line"></div>
                 <div class="brand-support">
                     <img src="../assets/icons/Tama-logo.svg" alt="Tama drums logo">
