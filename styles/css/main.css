@@ -61,6 +61,12 @@
   position: relative;
 }
 
+#nav-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #nav-container .logo {
   width: 45%;
 }
@@ -299,6 +305,7 @@
 
 .programs .join-btn:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .performing-artists-section {
@@ -475,10 +482,12 @@
   }
   #nav-container .navlinks-wrapper li {
     padding: 1rem 1.5rem;
+  }
+  #nav-container .navlinks-wrapper li a {
     font-weight: bold;
     color: #272a31;
   }
-  #nav-container .navlinks-wrapper .nav-join-btn {
+  #nav-container .nav-join-btn {
     padding: 0 .5rem;
     border: 4px solid #ec5242;
     color: #ec5242;
@@ -486,6 +495,14 @@
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+  }
+  #nav-container .nav-join-btn:hover {
+    background-color: rgba(236, 82, 66, 0.8);
+    color: #fff;
+    cursor: pointer;
+    border: none;
   }
   #headline {
     padding: 5.5rem 10% 6rem 10%;
@@ -675,5 +692,31 @@
   .copyright img {
     width: 120px;
   }
+}
+
+.performing-artists li {
+  position: relative;
+  overflow: visible;
+}
+
+.performing-artists li:hover .overlay {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #272a31;
+  overflow: hidden;
+  width: 120%;
+  height: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  z-index: 2;
 }
 /*# sourceMappingURL=main.css.map */

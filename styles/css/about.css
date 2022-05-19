@@ -114,12 +114,21 @@
      object-fit: cover;
 }
 
+.past-image-courosal .courosal-image-card:hover .courosal-image-fade {
+  bottom: 100%;
+  height: 0;
+}
+
 .courosal-image-fade {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: rgba(218, 52, 52, 0.561);
   color: #fff;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,6 +142,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .footer {
@@ -204,7 +215,7 @@
   #past-global-drum-fest {
     padding: 2rem 10%;
   }
-  #past-global-drum-fest h3 {
+  #past-global-drum-fest .past-fest-header {
     font-size: 1.5rem;
     color: #272a31;
   }
