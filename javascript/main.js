@@ -1,63 +1,52 @@
 const drummers = [
   {
+    name: 'Billy Cobham',
+    bio: 'Billy Cobham is an important figure in the development of the modern drum set.',
+    contentBio: 'He was one of the first drummers to mount the china cymbal “upside down”. ',
+    image: ['./assets/images/Billy-Cobham.jpg'],
+    id: 1,
+  },
+  {
     name: 'Tony Royster Jnr',
     bio: 'Tony Royster Jr. won the 1995 Guitar Center Drum-Off Competition'
         + 'when he was just 11 years old.',
-    contentBio: `Tony Royster Jr. won the 1995 Guitar Center Drum-Off Competition 
-    when he was just 11 years old. When he was young, his drumming heroes were two
-    of the greatest fusion drummers in history: Billy Cobham and Dennis Chambers. His
-    drumming frequently demonstrates his blazing fast hand and foot speed, as well as
-     his incorporation of “gospel chops” and linear patterns. Tony Royster Jr. has
-     performed with many of today’s greatest R&B, pop, and hip-hop artists including Katy
-    Perry, Mac Miller, Jay-Z, Joe Jonas, AWOLNATION, Residente, Big Sean, and Tori Kelly.`,
-    image: ['../assets/images/Tony Royster Jnr.jpg', '../assets/images/T.png'],
+    contentBio: 'When he was young, his drumming heroes were two of the greatest fusion drummers in history: Billy Cobham and Dennis Chambers.',
+    image: ['./assets/images/Tony Royster Jnr.jpg', './assets/images/T.png'],
+    id: 2,
   },
   {
     name: 'Anika Niles',
     bio: 'Anika Nilles became a YouTube sensation when she released her first video'
       + '“Alter Ego.”',
-    image: ['../assets/images/Anika Nilles.jpg'],
+    contentBio: ' She started drumming when she was six years old and has since studied with master educators like Claus Hessler and Jost Nickel.',
+    image: ['./assets/images/Anika-Nilles.jpg'],
+    id: 3,
   },
   {
     name: 'Will Calhoun',
     bio: 'Will Calhoun is a drummer from New York known for being a '
        + 'member of the band Living Colour.',
-    image: ['../assets/images/Calhoun_Will-.jpg'],
+    contentBio: 'He has performed with Wayne Shorter, Jaco Pastorius, Marcus Miller, Mos Def, B.B. King, Paul Simon, Public Enemy, and Run-DMC. ',
+    image: ['./assets/images/Calhoun_Will-.jpg'],
+    id: 4,
   },
   {
     name: 'John Blackwell Jr.',
     bio: 'Blackwell began learning the drums when he was three years old from his'
      + ' father.',
-    image: ['../assets/images/john-blackell.jpg'],
-  },
-  {
-    name: 'Larnell Lewis',
-    bio: 'Started playing drums since he was two years old, and he has risen'
-     + ' to become a notable names in modern drumming.',
-    image: ['../assets/images/Larnell Lewis-jp.jpg'],
-  },
-  {
-    name: 'Brian Blade',
-    bio: 'Brian Blade is one of the most accomplished contemporary jazz drummers of'
-     + ' the past 20 years.',
-    image: ['../assets/images/Brian Blade.jpg'],
-  },
-  {
-    name: 'Matt Garstka',
-    bio: `Matt Garstka became the drummer for the progressive metal band Animals as Leaders
-     in 2012.`,
-    image: ['../assets/images/Matt-Garstka-.jpg'],
+    contentBio: 'By the time he was 17, he was performing professionally.',
+    image: ['./assets/images/john-blackell.jpg'],
+    id: 5,
   },
   {
     name: 'Matt Cameron',
     bio: 'Cameron began performing professionally in San Diego when he was 14 years old',
-    image: ['../assets/images/Matt-Cameron.jpg'],
+    contentBio: 'Matt Cameron is best known for his work with Soundgarden and Pearl Jam.',
+    image: ['./assets/images/Matt-Cameron.jpg'],
+    id: 6,
+
   },
-  {
-    name: 'Billy Cobham',
-    bio: 'Billy Cobham is an important figure in the development of the modern drum set.',
-    image: ['../assets/images/Billy-Cobham.jpg'],
-  },
+
 ];
 
 const pastEventImages = [
@@ -65,21 +54,13 @@ const pastEventImages = [
     image: '../assets/images/Chris “Daddy” Dave.jpg',
     location: 'Global drum festival in Amsterdam',
     year: '2020',
-  },
-  {
-    image: '../assets/images/David-Garibaldi.jpg',
-    location: 'Global drum festival in Amsterdam',
-    year: '2021',
+    id: 1,
   },
   {
     image: '../assets/images/Billy-Cobham.jpg',
     location: 'Global drum festival in Amsterdam',
     year: '2021',
-  },
-  {
-    image: '../assets/images/Dennis-Chambers.jpg',
-    location: 'Global drum festival in Amsterdam',
-    year: '2020',
+    id: 2,
   },
 ];
 
@@ -102,15 +83,19 @@ const DOM = (() => {
     location.appendChild(closeWrapper);
   };
 
-  function createCard({ name, image, bio }) {
+  function createCard({
+    name, image, bio, id, contentBio,
+  }) {
     const performingArtists = document.querySelector('.performing-artists');
     const artistCard = createElement('li', 'artist-card');
+    artistCard.id = id;
 
     // Artist Image div
     const artistImageHolder = createElement('div', 'artist-image');
     const img = createElement('img');
     const [image1] = image;
-    img.src = image1;
+    img.src = `${image1}`;
+    img.classList.add(`image-${id}`);
     img.alt = name;
     artistImageHolder.appendChild(img);
 
@@ -120,7 +105,10 @@ const DOM = (() => {
     artistName.innerText = name;
     const artistBio = createElement('p', 'brief-bio');
     artistBio.innerText = bio;
-    artistBioHolder.append(artistName, artistBio);
+    const thinLine = createElement('div', 'thin-line');
+    const artistBio2 = createElement('p', 'artist-bio-2');
+    artistBio2.innerText = contentBio;
+    artistBioHolder.append(artistName, artistBio, thinLine, artistBio2);
 
     artistCard.append(artistImageHolder, artistBioHolder);
     if (performingArtists) {
@@ -141,7 +129,7 @@ const DOM = (() => {
     allCards.forEach((card, index) => {
       if (index > 1) {
         if (card.style.display === 'none') {
-          card.style.display = 'flex';
+          card.style.display = 'grid';
           moreBtn.innerHTML = `<span>Show Less</span>
                     <i class="fa-solid fa-chevron-up"></i>`;
         } else {
@@ -154,7 +142,6 @@ const DOM = (() => {
   }
 
   const mediaQueryMobile = window.matchMedia('(max-width: 768px)');
-
   if (mediaQueryMobile.matches) {
     toggleCard();
   }

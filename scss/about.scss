@@ -83,7 +83,7 @@ $section-left-padding: 0 10%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 1.5rem 0 1rem;
+  padding: 1.5rem 1rem 1rem;
   border-top: 1px solid rgba(121, 125, 136, 0.2);
 
   p {
@@ -162,6 +162,25 @@ $section-left-padding: 0 10%;
       min-height: 46px;
       padding: 0.5rem 0.5rem;
     }
+  }
+}
+
+#about-brand {
+  padding: 1.8rem 10%;
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .brand-logo {
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem 0;
   }
 }
 

@@ -79,7 +79,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Special thanks to [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) for the excellent Design guide.
+- Special thanks [Cindy Shin in Behance](https://www.behance.net/adagio07) who originally designed this [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) website.
 
 ## 📝 License
 

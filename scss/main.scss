@@ -59,24 +59,27 @@ $fonts-weight: (
 
 // Navbar section
 #nav-container {
-  height: 4.5rem;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-
-  .navbar {
-    display: flex;
+  .nav-socials-top {
+    display: none;
   }
 
-  .logo {
-    width: 45%;
+  .logo-container {
+    display: none;
   }
 
   .hamburger {
     width: 32px;
   }
+}
+
+.navbar {
+  display: flex;
+  height: 4.5rem;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-join-btn {
@@ -118,24 +121,15 @@ $fonts-weight: (
 #headline {
   padding: 2rem 1rem 3.5rem;
   background-color: rgba(255, 255, 255, 0);
-  position: relative;
 
-  .back-drop {
-    width: 100%;
-
-    .headline-bg-image {
-      z-index: -3;
-      width: 100%;
-      position: absolute;
-      max-height: 100px;
-      top: 0;
-      left: 0;
-      padding: 10em;
-      background-image: url(../../assets/images/DSC_1494-edited-1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  @media screen and (max-width: 768px) {
+    background-image: url("../assets/images/background-mobile.png");
   }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 20% 10%;
+  position: relative;
 
   .faded-backdrop {
     position: absolute;
@@ -171,6 +165,7 @@ $fonts-weight: (
     line-height: 22px;
     padding: 0 24px;
     border: 2px solid $white;
+    background-color: $white;
   }
 
   .venue {
@@ -218,23 +213,6 @@ $fonts-weight: (
   }
 }
 
-.performing-artists {
-  list-style: none;
-
-  .artist-card {
-    display: flex;
-    position: relative;
-    overflow: visible !important;
-  }
-
-  p {
-    margin-top: 0.5rem;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 16px;
-  }
-}
-
 // Artist Image Overlay
 .overlay {
   position: absolute;
@@ -271,6 +249,113 @@ $fonts-weight: (
 
 .performing-artists li:hover .overlay {
   transform: scale(1.5);
+}
+
+.more-btn {
+  margin: 12px;
+  padding: 12px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid rgba(78, 81, 91, 0.5);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(78, 81, 91, 0.8);
+
+  i {
+    color: $primary;
+  }
+}
+
+.thin-line {
+  width: 2rem;
+  border-bottom: 2px solid $primary;
+  margin: 1rem auto;
+}
+
+// Performing artist section
+
+.performing-artists-section {
+  min-height: max-content;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 1.5rem;
+  height: min-content;
+  color: $secondary;
+}
+
+.performing-artists {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px 10px;
+
+  @media screen and (min-width: 768px) {
+    padding: 1rem 10%;
+    grid-template-columns: repeat(2, minmax(303px, 1fr));
+  }
+
+  .artist-card {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+  }
+}
+
+.artist-image {
+  width: 160px;
+  height: 7rem;
+
+  @media screen and (max-width: 500px) {
+    width: 130px;
+    height: 6rem;
+  }
+
+  position: relative;
+  background-image: url(../assets/icons/check-box.png);
+  background-size: 45%;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+
+  img {
+    width: 140px;
+
+    @media screen and (max-width: 500px) {
+      width: 120px;
+    }
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.artist-bio {
+  padding: 0.6rem;
+
+  .thin-line {
+    margin: 0.5rem 0;
+    border-bottom: 2px solid $light;
+  }
+
+  h4 {
+    margin-top: 5px;
+  }
+
+  p {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 14px;
+    color: $primary;
+  }
 }
 
 .program-list {
@@ -313,81 +398,29 @@ $fonts-weight: (
   }
 
   .solo-icon {
-    background-image: url(../../assets/icons/drum-solo.svg);
+    background-image: url(../assets/icons/drum-solo.svg);
   }
 
   .shed-icon {
-    background-image: url(../../assets/icons/drum-shed.svg);
+    background-image: url(../assets/icons/drum-shed.svg);
   }
 
   .exhibition-icon {
-    background-image: url(../../assets/icons/Drum-exhibition.svg);
+    background-image: url(../assets/icons/Drum-exhibition.svg);
     background-size: 105%;
   }
 
   .master-class {
-    background-image: url(../../assets/icons/drum-master-class.svg);
+    background-image: url(../assets/icons/drum-master-class.svg);
   }
 
   .Meet-up-icon {
-    background-image: url(../../assets/icons/meet-up-icon.svg);
+    background-image: url(../assets/icons/meet-up-icon.svg);
   }
 }
 
-.thin-line {
-  width: 2rem;
-  border-bottom: 2px solid $primary;
-  margin: 1rem auto;
-}
-
-.performing-artists-section {
-  min-height: max-content;
-  background-color: $white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.6rem 1.5rem;
-  height: min-content;
+.artist-bio p:nth-child(4) {
   color: $secondary;
-
-  .more-btn {
-    margin: 12px;
-    padding: 12px;
-    width: 100%;
-    background-color: $white;
-    border: 1px solid rgba(78, 81, 91, 0.5);
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: rgba(78, 81, 91, 0.8);
-
-    i {
-      color: $primary;
-    }
-  }
-}
-
-.artist-image {
-  min-width: 100px;
-  height: 100px;
-  flex: 1 1 35%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 0% 0%;
-  }
-}
-
-.artist-bio {
-  flex: 1 0 65%;
-  min-height: 100px;
-
-  @media screen and (max-width: 768px) {
-    overflow: auto;
-  }
-
-  margin: 0 0 1rem 1rem;
 }
 
 .copyright {
@@ -441,16 +474,48 @@ $fonts-weight: (
 
 @media (min-width: $break-point-tablet) {
   #nav-container {
-    padding: $section-left-padding;
-    background-color: $white;
-    box-shadow: 0 5px 5px -4px #aaa;
+    .nav-socials-top {
+      height: 33px;
+      background-color: $secondary;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 10%;
+    }
+
+    .navbar {
+      padding: $section-left-padding;
+      background-color: $white;
+      box-shadow: 0 5px 5px -4px #aaa;
+    }
+
+    .logo-container {
+      display: block;
+      flex-grow: 2;
+    }
 
     .logo {
       width: 120px;
     }
 
-    .hamburger {
+    .hamburger-btn {
       display: none;
+    }
+  }
+
+  .nav-socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+
+    li {
+      padding-left: 1rem;
+
+      a {
+        text-decoration: none;
+        color: $light;
+        font-size: 14px;
+      }
     }
   }
 
@@ -466,10 +531,15 @@ $fonts-weight: (
       font-weight: bold;
       color: $secondary;
     }
+
+    li:hover a {
+      color: $primary;
+    }
   }
 
   .nav-join-btn {
-    padding: 0 0.5rem;
+    display: block;
+    padding: 12px 0.5rem;
     border: 4px solid $primary;
     color: $primary;
     background-color: $white;
@@ -486,10 +556,9 @@ $fonts-weight: (
 
   #headline {
     padding: 5.5rem 10% 6rem 10%;
-    background-image: url(../../assets/icons/illustration2.png);
+    background-image: url("../assets/images/background-desktop.png");
     background-repeat: no-repeat;
-    background-size: 50px;
-    background-position: 90vw;
+    background-size: cover;
 
     div {
       font-size: 2rem;
@@ -504,6 +573,7 @@ $fonts-weight: (
       max-width: 38rem;
       border: 3px solid $white;
       margin: 2rem 0 3rem 0;
+      background-color: $white;
     }
 
     .event-date {
@@ -567,51 +637,6 @@ $fonts-weight: (
   .perform-header h4,
   .footer h4 {
     font-size: 1.5rem;
-  }
-
-  .performing-artists {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1.8rem 5%;
-  }
-
-  .artist-card {
-    flex-direction: column;
-    min-width: 200px;
-    max-width: 210px;
-    height: 250px;
-    overflow: hidden;
-    margin: 0.2rem 0.3rem;
-    border: 1px solid rgba(78, 81, 91, 0.5);
-    box-shadow: 0 5px 5px -1px #aaa;
-
-    p {
-      height: max-content;
-      margin-top: 0;
-      font-size: 14px;
-      font-style: normal;
-      line-height: 16px;
-      padding: 0.4rem;
-    }
-  }
-
-  .artist-bio {
-    max-height: 100px;
-    margin: 0;
-
-    h4 {
-      padding-left: 0.4rem;
-    }
-  }
-
-  .artist-image {
-    height: 60%;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
   }
 
   .performing-artists-section .more-btn {
