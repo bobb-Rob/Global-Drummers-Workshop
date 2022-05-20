@@ -4,6 +4,9 @@
 
 In this project, I built the home and the about page of the website and it is adaptable to all screen sizes. The template I used as a guide was originally designed by [Cindy Shin in Behance](https://www.behance.net/adagio07).
 
+## Video describing this project
+[See Video Here](https://www.loom.com/share/fb7f9611b25f4b13bbc9d0eab6e2fdb2)
+
 ## Live Demo
 Below is the link to the demo of this porject.
 
