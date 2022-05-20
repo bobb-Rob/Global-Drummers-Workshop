@@ -1,0 +1,231 @@
+.logo {
+  width: 45%;
+}
+
+.navbar {
+  display: flex;
+}
+
+.about-nav-background {
+  background-color: rgb(246, 245, 245) !important;
+}
+
+#about-headline-container {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(246, 245, 245);
+  background-image: url(../../assets/icons/illustrationOne.png), url(../../assets/icons/illustration7.png), url(../../assets/icons/illustration6.png), url(../../assets/icons/icons.png);
+  background-size: 20%, 6%, 5%, 10%;
+  background-repeat: no-repeat;
+  background-position: 10% 35%, 15% -10px, 75% 2%, 95% 32%;
+}
+
+#about-headline-container div {
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#about-headline-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  max-width: 30rem;
+}
+
+#about-headline-container .about-headline-body {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid rgba(121, 125, 136, 0.2);
+  box-shadow: 0 2px 7px 0 #dee1e2;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+  color: rgb(74, 74, 74);
+}
+
+.about-headline-body + p {
+  text-align: center;
+  margin: 0 2rem;
+  padding: 2rem 1rem;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.contact-us {
+  color: rgb(39, 42, 49);
+  font-weight: 800;
+}
+
+#about-global-DF {
+  min-height: 400px;
+  padding: 0 1rem;
+}
+
+#past-global-drum-fest {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem 1rem 1rem;
+  border-top: 1px solid rgba(121, 125, 136, 0.2);
+}
+
+#past-global-drum-fest p {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.past-image-courosal {
+  width: 100%;
+  border: 1px solid rgba(121, 125, 136, 0.2);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.past-image-courosal .courosal-image-card {
+  height: 200px;
+  width: 100%;
+  background-color: gray;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.past-image-courosal .courosal-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.past-image-courosal .courosal-image-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(218, 52, 52, 0.561);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.courosal-image-card:hover .courosal-image-fade {
+  bottom: 100%;
+  height: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(39, 42, 49);
+  padding: 1rem;
+}
+
+.footer h3 {
+  color: #d3d3d3;
+}
+
+.about-footer .brand-support {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-footer .brand-support img {
+  min-height: 46px;
+  padding: 0.5rem 0.5rem;
+}
+
+#about-brand {
+  padding: 1.8rem 10%;
+}
+
+#about-brand h3 {
+  text-align: center;
+}
+
+#about-brand p {
+  font-size: 12px;
+  text-align: center;
+}
+
+#about-brand .brand-logo {
+  display: flex;
+  justify-content: center;
+  padding: 3.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  #about-headline-container {
+    padding: 5rem 10%;
+    background-color: rgb(246, 245, 245);
+    background-image: url(../../assets/icons/illustrationOne.png), url(../../assets/icons/illustration7.png), url(../../assets/icons/illustration6.png), url(../../assets/icons/icons.png);
+    background-size: 6rem, 3%, 2rem, 2.5rem;
+    background-repeat: no-repeat;
+    background-position: 23% 55%, 15% 25%, 75% 28%, 79% 42%;
+  }
+
+  #about-headline-container div {
+    display: none;
+  }
+
+  #about-headline-container h1 {
+    font-size: 3rem;
+    line-height: 4.3rem;
+    max-width: 40rem;
+  }
+
+  #about-headline-container .about-headline-body {
+    width: 60%;
+    padding: 1.6rem 2.5rem;
+  }
+
+  #past-global-drum-fest {
+    padding: 2rem 10%;
+  }
+
+  #past-global-drum-fest .past-fest-header {
+    font-size: 1.5rem;
+    color: rgb(39, 42, 49);
+  }
+
+  #past-global-drum-fest > p {
+    font-size: 1.2rem;
+    color: rgb(39, 42, 49);
+  }
+
+  #past-global-drum-fest .past-image-courosal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #past-global-drum-fest .past-image-courosal .courosal-image-card {
+    flex-basis: 47%;
+  }
+
+  .about-footer .footer {
+    display: none;
+  }
+
+  .about-footer .copyright {
+    background-color: rgb(39, 42, 49);
+  }
+
+  .about-footer .copyright h6 {
+    color: #d3d3d3;
+  }
+}
